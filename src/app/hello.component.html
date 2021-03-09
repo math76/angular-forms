@@ -1,0 +1,11 @@
+<form [formGroup]="formGroup" novalidate>
+  <select formControlName="currency">
+    <option value="">-- wybierz--</option>
+   <option [value]="currency.code" *ngFor="let currency of currencies">{{currency.code}}</option>
+ </select>
+  <br><br>
+  <select formControlName="account">
+    <option value="">-- wybierz--</option>
+   <option [value]="account.code" *ngFor="let account of accounts">{{account.code}}</option>
+ </select>
+</form>
