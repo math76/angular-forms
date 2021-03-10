@@ -4,7 +4,6 @@ import { BehaviorSubject } from "rxjs";
 import { Account } from "./account";
 import { Currency } from "./currency";
 import { FormService } from "./formService";
-import { Person } from "./person";
 
 @Component({
   selector: "hello",
