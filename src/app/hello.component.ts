@@ -34,7 +34,10 @@ export class HelloComponent implements OnInit {
 
   ngOnInit() {
     this.currencies$.subscribe(it => (this.currencies = it));
-    this.accounts$.subscribe(it => (this.accounts = it));
+    this.accounts$.subscribe(it => {
+      this.accounts = it;
+      this.formGroup.get("account").setValue("");
+    });
     this.formService.listCurrency();
     this.formService.listAccount("");
     this.formGroup
